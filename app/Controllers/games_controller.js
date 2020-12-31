@@ -122,7 +122,7 @@ const createSubGame = ((req, res) => {
 
 
 // tested, perfect
-const mainGameList = ((req, res) => {
+const gameList = ((req, res) => {
     console.log(req.params);
     const gameId =  req.params.id;
     SubGameModel.find({mainGame: gameId})
@@ -147,7 +147,7 @@ const mainGameList = ((req, res) => {
 
 
 //tested, perfect
-const gameList = ((req, res) => {
+const mainGameList = ((req, res) => {
     console.log(req.username);
     const username =  req.username;
     MainGameModel.find({creator: username})
